@@ -15,6 +15,7 @@
     background-color: #3a3a3a
     border-radius: 20px
     border: 3px outset #e6e6e6
+    transition: 0.4s
 
 .LogIn_Header-text
     font-size: 25px
@@ -37,6 +38,10 @@
     width: 100%
     padding: 10px
     margin: 10px 0
+    transition: 0.2s
+
+.LogIn_Form-item--input:hover
+    transform: scale(1.01)
 
 .LogIn_Form--Buttons
     display: flex
@@ -54,16 +59,26 @@
     transition: 0.4s
 
 .LogIn_Button:hover
+    transform: scale(1.02)
     background-color: #0c53bd
     cursor: pointer
 
 .LogIn_Button--login
     background-color: #1370fc
     color: white
+    font-size: 1em
 
 .LogIn_Button--register
+    text-align: center
     background-color: #1370fc
     color: white
+    text-decoration: none
+    font-size: 1em
+
+.LogIn_Form--error-text
+    text-align: center
+    color: red
+    margin-bottom: 10px
 
 // @media( min-width: 576px) //Phone
 
@@ -73,7 +88,6 @@
 
     .LogIn_Header-text
         font-size: 30px
-        margin-bottom: 20px
 
     .LogIn_Form--Buttons
         flex-direction: row
