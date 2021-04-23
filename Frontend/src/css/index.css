@@ -4,18 +4,20 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.app__wrapper {
+.LogIn_Body {
   width: 100%;
   height: 100vh;
+  background-image: url("../img/photo/MainBackground_01.jpg");
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -24,44 +26,271 @@
           align-items: center;
 }
 
-.app_main-text {
-  font-size: 50px;
-  margin: 20px;
-}
-
-.app_info-message {
-  font-size: 25px;
-  margin: 10px;
-  color: red;
-}
-
-.app_check-btn {
-  font-size: 25px;
-  margin: 10px;
-  padding: 10px;
-  background-color: #3485ff;
-  border: none;
-  color: white;
-  -webkit-box-shadow: 2px 2px 5px #9b9b9b;
-          box-shadow: 2px 2px 5px #9b9b9b;
+.LogIn_Body-container {
+  width: 250px;
+  padding: 20px;
+  background-color: #3a3a3a;
+  border-radius: 20px;
+  border: 3px outset #e6e6e6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.app_check-btn:hover {
+.LogIn_Header-text {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.LogIn_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.LogIn_Form-item--label {
+  margin-right: 10px;
+}
+
+.LogIn_Form-item--input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.LogIn_Form-item--input:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.LogIn_Form--Buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.LogIn_Button {
+  min-width: 100px;
+  width: 100%;
+  min-height: 35px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.LogIn_Button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background-color: #0c53bd;
   cursor: pointer;
-  background-color: #0d62e0;
 }
 
-.app_rocket-icon {
-  color: #585858;
-  font-size: 200px;
-  text-shadow: 0px 0px 2px black;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+.LogIn_Button--login {
+  background-color: #1370fc;
+  color: white;
+  font-size: 1em;
 }
 
-.app_rocket-icon:hover {
+.LogIn_Button--register {
+  text-align: center;
+  background-color: #1370fc;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.LogIn_Form--error-text {
+  text-align: center;
   color: red;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .LogIn_Body-container {
+    width: 500px;
+  }
+  .LogIn_Header-text {
+    font-size: 30px;
+  }
+  .LogIn_Form--Buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .LogIn_Button--login {
+    margin-right: 20px;
+  }
+}
+
+.Register_Body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/photo/MainBackground_01.jpg");
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Register_Body-container {
+  width: 250px;
+  padding: 20px;
+  background-color: #3a3a3a;
+  border-radius: 20px;
+  border: 3px outset #e6e6e6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.Register_Header-text {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.Register_Form--input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.Register_Form--input:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.Register_Form--Buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.Register_Button {
+  min-width: 100px;
+  width: 100%;
+  min-height: 35px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.Register_Button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background-color: #0c53bd;
+  cursor: pointer;
+}
+
+.Register_Button--login {
+  background-color: #1370fc;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+}
+
+.Register_Button--register {
+  font-size: 1em;
+  color: white;
+  background-color: #1370fc;
+}
+
+@media (min-width: 768px) {
+  .Register_Body-container {
+    width: 500px;
+  }
+  .Register_Form--Buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .Register_Button--login {
+    margin-right: 20px;
+  }
+}
+
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active {
+  opacity: 1;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms;
+  transition: opacity 1000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  z-index: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 1000ms;
+  transition: opacity 1000ms;
+}
+
+.app_animation-container {
+  position: relative;
 }
 /*# sourceMappingURL=index.css.map */
